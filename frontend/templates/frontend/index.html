@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+
+    <style>
+        .creative-lp .btn-white, .creative-lp .orange-text {
+            color: #fb5364 !important;
+        }
+
+        .creative-lp .btn.pink-gradient {
+            background: -webkit-linear-gradient(50deg, #FF5858, #ee4392);
+            background: -o-linear-gradient(50deg, #FF5858, #ee4392);
+            background: linear-gradient(40deg, #FF5858, #ee4392);
+        }
+
+        .creative-lp .navbar {
+            font-weight: 400;
+            background-color: #dddde4;
+        }
+
+        body {
+            height: 100%;
+            margin-top: 134px;
+        }
+
+        .d-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 250px;
+            grid-gap: 7px;
+        }
+
+        .item {
+            position: relative;
+        }
+
+        .item:nth-child(1) {
+            grid-column: 1/ 2;
+            grid-row: 1 / 3;
+        }
+
+        .item:nth-child(2) {
+            grid-column: 2;
+            grid-row: 0 / 2;
+        }
+
+        .item:nth-child(3) {
+            grid-column: 2;
+            grid-row: 2 / 2;
+        }
+
+        .item a {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="creative-lp">
+
+<!-- Navigation & Intro -->
+<header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
+        <a class="navbar-brand font-weight-bold title" href="{% url 'home' %}">
+            <img src="{% static 'img/sinklit_logo__vertic.png' %}" alt="logo" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="ml-auto px-4">
+                <i class="fas fa-phone"></i> +7 (499) 348-17-00, 8 (800) 200-36-25,<br>
+                <i class="fab fa-whatsapp"></i> +7 (916) 915-17-00<br>
+                <i class="fas fa-map-marked-alt"></i> Москва, Дмитровское шоссе, 60
+            </div>
+
+        </div>
+    </nav>
+
+</header>
+<!-- Navigation & Intro -->
+
+<!-- Main content -->
+<main>
+
+    <div class="container">
+
+        <!-- Section: Features v.4 -->
+        <section id="features" class="my-5 py-4">
+
+            <!-- Section heading -->
+            <h3 class="text-center title my-5 dark-grey-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
+                <strong>Несъемная опалубка для стеклофибробетона</strong>
+            </h3>
+
+            <!-- Section sescription -->
+            <p class="text-center w-responsive mx-auto my-5 grey-text wow fadeIn" data-wow-delay="0.2s">
+                Для вашего дома и коттеджа</p>
+
+            <div class="features-small wow fadeIn" data-wow-delay="0.4s">
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">1</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Конструкция собирается из уже готовых элементов
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">2</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Не нужно разбирать после заливки бетона. Она остается частью стены, в качестве
+                                    облицовки.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">3</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Дополнительный утеплитель не требуется.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">4</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Можно монтировать опалубку сложной конфигурации, с различными переходами, радиусами,
+                                    криволинейными поверхностями.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">5</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>В ней легко сделать отверстия для инженерных коммуникаций: прокладки труб и
+                                    электрокабелей.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">6</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Опалубочные панели максимально защищены от коррозии.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">7</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Отличная огнестойкость материала.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">8</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Не подвергается деформации при перепадах температур.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="width:55px;height:55px;border:1px solid #dddde4;background-color:#dddde4;border-radius:50%;">
+                                    <span class="font-weight-bold orange-text" style="font-size: 25px">9</span>
+                                </div>
+                            </div>
+                            <div class="col-10 mb-2">
+                                <p>Практически не требует эсплуатационного ухода.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- Section: Features v.4 -->
+
+    </div>
+
+
+    <div class="container-fluid light-grey-background">
+        <div class="container py-4">
+
+
+            <section class="mt-3 mb-5 pt-1">
+
+                <div id="mdb-lightbox-ui"></div>
+
+                <div class="d-grid mdb-lightbox">
+                    <figure class="item">
+                        <a href="{% static 'img/124.jpg' %}"
+                           class="z-depth-1 rounded" data-size="1600x1067">
+                            <img src="{% static 'img/124.jpg' %}"/>
+                        </a>
+                    </figure>
+                    <figure class="item">
+                        <a href="{% static 'img/123.jpg' %}"
+                           class="z-depth-1 rounded" data-size="1600x1067">
+                            <img src="{% static 'img/123.jpg' %}"/>
+                        </a>
+                    </figure>
+                    <figure class="item">
+                        <a href="{% static 'img/125.jpg' %}"
+                           class="z-depth-1 rounded" data-size="1600x1067">
+                            <img src="{% static 'img/125.jpg' %}"/>
+                        </a>
+                    </figure>
+                </div>
+            </section>
+
+            <hr class="pb-3">
+            <div class="w-100 d-flex justify-content-center">
+                <a href="#form"
+                   class="mb-4 btn pink-gradient white-text btn-rounded font-weight-bold wow fadeIn waves-effect waves-light">Рассчитать
+                    стоимость</a>
+            </div>
+
+
+        </div>
+    </div>
+    <!--Second container-->
+
+    <div class="container">
+
+        <!-- Section: Team v.1 -->
+        <section class="pb-5">
+
+            <p class="w-responsive mx-auto my-5">Работа с несъемной опалубкой выполняется в
+                следующем порядке. Сначала разрабатывается проект, на котором указывается местоположение стен,
+                перегородок, колонн, прочих строительных конструкций. Затем производится монтаж опалубки, в которой
+                обязательно предусматривается место для арматурной сетки и крепления облицовочных панелей. В нее
+                заливается бетон. После его затвердевания опалубка становится единым целым с конструкцией.
+            </p>
+            <p class="w-responsive mx-auto my-5">Применение несъемной опалубки из стеклофибробетона Широко применяется
+                несъемная опалубка из СФБ и при
+                строительстве мостов, прочих инженерных сооружений, что значительно сокращает сроки сдачи возводимых
+                объектов. Поскольку фибробетон абсолютно инертен к воздействию влаги и агрессивных сред, он не только
+                предохраняет стальную арматуру от коррозии, но и защищает стены с обеих сторон. Имея маленький
+                коэффициент линейного расширения, этот материал не подвергается деформации при перепадах температур.
+            </p>
+            <p class="w-responsive mx-auto my-5">Применение стеклофибробетона в качестве несъемной опалубки значительно
+                облегчает процесс строительства,
+                обеспечивает высокое качество заливки, удешевляет технологию. Благодаря своим уникальным свойствам, этот
+                материал еще долго будет оставаться востребованным, как в строительстве, так и в других областях
+                промышленности.
+            </p>
+            <p class="w-responsive mx-auto my-5">Наша компания с успехом производят СФБ и различные изделия из него, а
+                также выполняет монтаж
+                декоративных архитектурных элементов на фасадах зданий. Возможна и разработка проекта, у кого он
+                отсутствует. Придайте своим зданиям неповторимый облик!
+            </p>
+
+        </section>
+        <!-- Section: Team v.1 -->
+
+
+        <hr>
+
+        <!-- Section: Contact v.2 -->
+        <section id="form" class="mb-5">
+
+            {% if messages %}
+
+                {% for message in messages %}
+
+                    {% if message.tags == 'error' %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-{{ message.tags }}" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
+            {% endif %}
+
+            <!-- Section heading -->
+            <h3 class="text-center title my-5 py-4 dark-grey-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
+                <strong>Получить расчет проекта</strong>
+            </h3>
+
+            <!-- Section sescription -->
+            <p class="text-center grey-text my-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Оставьте свой
+                телефон.<br>Мы перезвоним, чтобы уточнить детали.</p>
+
+            <div class="wow fadeIn" data-wow-delay="0.4s">
+
+                <!-- Grid column -->
+                <div class="w-75 mx-auto">
+
+                    <form method="post" action="{% url 'home' %}" id="subscribe_form"
+                          class="needs-validation container" novalidate>
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+
+                        <div class="modal-body">
+
+                            {{ form.non_field_errors }}
+
+                            <div class="md-form mb-5">
+                                {{ post_form.name.errors }}
+                                <i class="fas fa-user prefix orange-text"></i>
+                                <label for="{{ form.name.id_for_label }}" class="">Ваше имя</label>
+                                {{ form.name }}
+                                <div class="valid-feedback">Отлично!</div>
+                                <div class="invalid-feedback">Поле не должно быть пустым.</div>
+                            </div>
+                            <div class="md-form mb-5">
+                                {{ post_form.phone.errors }}
+                                <i class="fas fa-phone prefix orange-text"></i>
+                                <label for="{{ form.phone.id_for_label }}" class="">Ваш телефон</label>
+                                {{ form.phone }}
+                                <div class="valid-feedback">Отлично!</div>
+                                <div class="invalid-feedback">Поле не должно быть пустым.</div>
+                            </div>
+                            <div class="md-form mb-5">
+                                {{ post_form.email.errors }}
+                                <i class="fas fa-envelope prefix orange-text"></i>
+                                <label for="{{ form.email.id_for_label }}" class="">Ваш email</label>
+                                {{ form.email }}
+                                <div class="valid-feedback">Отлично!</div>
+                                <div class="invalid-feedback">Поле не должно быть пустым.</div>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-rounded btn-white font-weight-bold mx-auto">Отправить
+                            </button>
+                        </div>
+                    </form>
+
+
+                </div>
+                <!-- Grid column -->
+
+
+            </div>
+        </section>
+        <!-- Section: Contact v.2 -->
+
+    </div>
+
+</main>
+<!-- Main content -->
+
+<!--Footer-->
+<footer class="page-footer text-center text-md-left unique-color-dark pt-0">
+
+    <!-- Copyright -->
+    <div class="footer-copyright py-3 text-center wow fadeIn" data-wow-delay="0.3s">
+        <div class="container-fluid">
+            © 2020 Copyright: Sinklit
+        </div>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!--/.Footer-->
+
+<!-- JQuery -->
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+<!-- Custom scripts -->
+<script>
+    // Animation init
+    new WOW().init();
+
+    // Gallery
+    $(function () {
+        var selectedClass = "";
+        $(".filter").click(function () {
+            selectedClass = $(this).attr("data-rel");
+            $("#gallery").fadeTo(100, 0.1);
+            $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+            setTimeout(function () {
+                $("." + selectedClass).fadeIn().addClass('animation');
+                $("#gallery").fadeTo(300, 1);
+            }, 300);
+        });
+    });
+
+    $(function () {
+        $("#mdb-lightbox-ui").load("https://mdbootstrap.com/wp-content/themes/mdbootstrap4/mdb-addons/mdb-lightbox-ui.html");
+    });
+
+</script>
+
+</body>
+
+</html>

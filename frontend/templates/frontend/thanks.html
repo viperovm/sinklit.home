@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+
+    <style>
+        .creative-lp .btn-white, .creative-lp .orange-text {
+            color: #fb5364 !important;
+        }
+
+        .creative-lp .btn.pink-gradient {
+            background: -webkit-linear-gradient(50deg, #FF5858, #ee4392);
+            background: -o-linear-gradient(50deg, #FF5858, #ee4392);
+            background: linear-gradient(40deg, #FF5858, #ee4392);
+        }
+
+        .creative-lp .navbar {
+            font-weight: 400;
+            background-color: #dddde4;
+        }
+
+        body {
+            height: 100%;
+            margin-top: 134px;
+        }
+
+        .d-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 250px;
+            grid-gap: 7px;
+        }
+
+        .item {
+            position: relative;
+        }
+
+        .item:nth-child(1) {
+            grid-column: 1/ 2;
+            grid-row: 1 / 3;
+        }
+
+        .item:nth-child(2) {
+            grid-column: 2;
+            grid-row: 0 / 2;
+        }
+
+        .item:nth-child(3) {
+            grid-column: 2;
+            grid-row: 2 / 2;
+        }
+
+        .item a {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="creative-lp">
+
+<!-- Navigation & Intro -->
+<header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
+        <a class="navbar-brand font-weight-bold title" href="{% url 'home' %}">
+            <img src="{% static 'img/sinklit_logo__vertic.png' %}" alt="logo" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="ml-auto px-4">
+                <i class="fas fa-phone"></i> +7 (499) 348-17-00, 8 (800) 200-36-25,<br>
+                <i class="fab fa-whatsapp"></i> +7 (916) 915-17-00<br>
+                <i class="fas fa-map-marked-alt"></i> Москва, Дмитровское шоссе, 60
+            </div>
+
+        </div>
+    </nav>
+
+</header>
+<!-- Navigation & Intro -->
+
+<!-- Main content -->
+<main>
+
+    <div class="view container-fluid" style="height: 100vh; width:100%; background-image: url({% static 'img/construction6.jpg' %}); background-size: cover; background-position:center center;margin-top:-190px;padding: 0;">
+
+        <div class="mask rgba-black-strong">
+            <div class="container h-100 d-flex justify-content-center align-items-center">
+          <div class="row smooth-scroll">
+            <div class="col-md-12 white-text text-center">
+              <div class="wow fadeInDown" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeInDown; animation-delay: 0.2s;">
+                <h2 class="display-3 font-weight-bold text-uppercase mb-2 spacing px-4 py-3">
+                  <strong>СПАСИБО!</strong>
+                </h2>
+
+                <h4 class="subtext-header mt-4 mb-5">Мы свяжемся с Вами в ближайшее время</h4>
+              </div>
+              <a href="{% url 'home' %}" class="btn btn-white btn-rounded font-weight-bold dark-grey-text waves-effect waves-light">На главную</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+    </div>
+
+</main>
+<!-- Main content -->
+
+<!--Footer-->
+<footer class="page-footer text-center text-md-left unique-color-dark pt-0">
+
+    <!-- Copyright -->
+    <div class="footer-copyright py-3 text-center wow fadeIn" data-wow-delay="0.3s">
+        <div class="container-fluid">
+            © 2020 Copyright: Sinklit
+        </div>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!--/.Footer-->
+
+<!-- JQuery -->
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+<!-- Custom scripts -->
+<script>
+    // Animation init
+    new WOW().init();
+
+    // Gallery
+    $(function () {
+        var selectedClass = "";
+        $(".filter").click(function () {
+            selectedClass = $(this).attr("data-rel");
+            $("#gallery").fadeTo(100, 0.1);
+            $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+            setTimeout(function () {
+                $("." + selectedClass).fadeIn().addClass('animation');
+                $("#gallery").fadeTo(300, 1);
+            }, 300);
+        });
+    });
+
+    $(function () {
+        $("#mdb-lightbox-ui").load("https://mdbootstrap.com/wp-content/themes/mdbootstrap4/mdb-addons/mdb-lightbox-ui.html");
+    });
+
+</script>
+
+</body>
+
+</html>
